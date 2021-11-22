@@ -20,10 +20,9 @@ def hex_to_base64(hex_str):
 
 	if len(hex_str) % 2:#Исключение: выбрасывается, если аргумент некорректный'''	
 		raise ValueError('non-hexadecimal number found in hex_to_base64 arg')
-	else:
-		for i in hex_str:
-			if i not in '0123456789ABCDEFabcdef':
-				raise ValueError('non-hexadecimal number found in hex_to_base64 arg')
+	for i in hex_str:
+		if i not in '0123456789ABCDEFabcdef':
+			raise ValueError('non-hexadecimal number found in hex_to_base64 arg')
 
 	padding_with_zeros = lambda num: '0' * (8 - len(num)) + num # Функция дополняющая число нулями слева(до 8 символов)
 
@@ -38,6 +37,7 @@ def hex_to_base64(hex_str):
 		case 2: result += '=='
 		case _: None
 	return result
+
 
 s = '49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d'
 b64 = hex_to_base64(s)
