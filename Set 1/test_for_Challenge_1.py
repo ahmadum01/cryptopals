@@ -1,5 +1,5 @@
 import pytest
-from Challenge1 import *
+from Challenge_1 import *
 
 
 def test1():
