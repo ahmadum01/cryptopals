@@ -3,8 +3,6 @@ import re
 first_hex = '1c0111001f010100061a024b53535009181c'
 second_hex = '686974207468652062756c6c27732065796'
 
-first_hex = '0'
-second_hex = '0'
 
 # with standard functions
 def xor(first, second):
@@ -52,5 +50,5 @@ def my_xor(first, second):
     return hex(int(result, 2))[2:]
 
 
-print('XOR with standard functions:', xor(first_hex, second_hex))
-print('manual xor realisation:     ', my_xor(first_hex, second_hex))
+# print('XOR with standard functions:', xor(first_hex, second_hex))
+# print('manual xor realisation:     ', my_xor(first_hex, second_hex))
